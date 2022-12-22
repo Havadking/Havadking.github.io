@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="" />
+<meta property="og:description" content="Java学习笔记 1 Java SE 基础 1.1 面向对象基础 1.1.1 什么是类 类是对现实生活中一类具有相同属性和行为 的事物的抽象。 类的属性由成员变量体现。 类的行为由成员" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/java/" /><meta property="article:section" content="posts" />
+
+<meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Java学习笔记 1 Java SE 基础 1.1 面向对象基础 1.1.1 什么是类 类是对现实生活中一类具有相同属性和行为 的事物的抽象。 类的属性由成员变量体现。 类的行为由成员"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/java/" /><link rel="prev" href="http://example.org/posts/java%E7%BC%96%E7%A0%81%E5%91%BD%E5%90%8D%E4%B9%8B%E9%81%93/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/java\/"
+        },"genre": "posts","wordcount":  5803 ,
+        "url": "http:\/\/example.org\/posts\/java\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Havad"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/Havadking" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Havad</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;5803 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;12 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1--java-se-基础">1  Java SE 基础</a>
+      <ul>
+        <li><a href="#11-面向对象基础">1.1 面向对象基础</a></li>
+        <li><a href="#12-api-基础">1.2 API 基础</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-java-se-进阶">2 Java SE 进阶</a>
+      <ul>
+        <li><a href="#21-面向对象进阶">2.1 面向对象进阶</a></li>
+        <li><a href="#22-常用api异常">2.2 常用API&amp;异常</a></li>
+        <li><a href="#23-集合">2.3 集合</a></li>
+      </ul>
+    </li>
+    <li><a href="#附录idea常用快捷键happy">附录：IDEA常用快捷键:happy:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="java学习笔记">Java学习笔记</h1>
+<h2 id="1--java-se-基础">1  Java SE 基础</h2>
+<h3 id="11-面向对象基础">1.1 面向对象基础</h3>
+<h4 id="111-什么是类">1.1.1 什么是类</h4>
+<ul>
+<li>类是对现实生活中一类具有<strong>相同属性和行为</strong> 的事物的抽象。
+<ul>
+<li>类的属性由<strong>成员变量</strong>体现。</li>
+<li>类的行为由<strong>成员方法</strong>体现（去掉static关键字）。</li>
+</ul>
+</li>
+</ul>
+<h4 id="112-什么是对象">1.1.2 什么是对象</h4>
+<ul>
+<li>看得到摸得着的<strong>真实存在的实体</strong>。</li>
+<li><strong>类是对象的抽象，对象是类的实体。</strong></li>
+<li>对象具有<strong>属性</strong>和<strong>行为</strong>。</li>
+</ul>
+<h4 id="113-java内存分配">1.1.3 Java内存分配</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203021817310.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203021817310.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203021817310.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203021817310.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203021817310.png"
+        title="image-20221203021817310" /></p>
+<ul>
+<li>
+<p><strong>栈</strong>：所有<strong>局部变量</strong>都会在栈内存中创建。</p>
+</li>
+<li>
+<p>方法执行都会加载到栈里。</p>
+</li>
+<li>
+<p>方法执行完会从栈内存中消失。</p>
+</li>
+<li>
+<p>**堆：**所有对象及其对应的实例变量和数组会放到堆内存中。</p>
+</li>
+<li>
+<p>new出来的东西
+- 	new出来的有一个地址值，用来被空闲时回收</p>
+</li>
+</ul>
+<pre><code> - 	实例变量具有默认初识值。
+</code></pre>
+<ul>
+<li><strong>单个对象</strong></li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022158713.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022158713.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022158713.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022158713.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022158713.png"
+        title="image-20221203022158713" /></p>
+<ul>
+<li>
+<p><strong>多个对象</strong><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022626441.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022626441.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022626441.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022626441.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203022626441.png"
+        title="image-20221203022626441" /></p>
+</li>
+<li>
+<p><strong>多个引用指向相同</strong></p>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023101368.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023101368.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023101368.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023101368.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023101368.png"
+        title="image-20221203023101368" /></p>
+<h4 id="114-关键字和构造方法">1.1.4 关键字和构造方法</h4>
+<ul>
+<li>
+<p>成员变量和局部变量</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023655127.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023655127.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023655127.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023655127.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203023655127.png"
+        title="image-20221203023655127" /></p>
+</li>
+<li>
+<p><strong>JavaBean</strong></p>
+<ul>
+<li>java的一个类，其对象可以在程序中封装数据。</li>
+<li>满足：变量private修饰；对应set/get方法；提供一个无参构造方法；</li>
+</ul>
+</li>
+</ul>
+<h3 id="12-api-基础">1.2 API 基础</h3>
+<h4 id="121-scanner">1.2.1 Scanner</h4>
+<ul>
+<li>next和nextline的区别:
+<ul>
+<li>next():遇到空格不在录入。</li>
+<li>nextline():可以将数据完整接收过来。遇到回车、换行符结束录入。</li>
+</ul>
+</li>
+<li>nextline和nextint同时使用会出现问题
+<ul>
+<li>nextint在前面时，输入了回车导致nextline无法接受到输入值。</li>
+</ul>
+</li>
+</ul>
+<h4 id="122-string">1.2.2 String</h4>
+<ul>
+<li>Java中<strong>所有的字符串</strong>都是String的对象。</li>
+<li>字符串是一个常量，其值是不可更改的。</li>
+<li>String是一个特殊类，打印其对象名时不会出现内存地址，而是其记录的真实内容。</li>
+</ul>
+<blockquote>
+<ul>
+<li>==号比较
+<ul>
+<li>基本数据类型：比较具体的值。</li>
+<li>引用数据类型：比较地址值。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>通过双引号创建字符串对象时，字符串相同时，无论代码中创建几遍，JVM都只创建一个，并在<strong>字符串常量池</strong>中维护。
+<ul>
+<li>字符串常量池：双引号创建字符串时，系统会检查其是否存在在字符串常量池中。</li>
+<li><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055026862.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055026862.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055026862.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055026862.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055026862.png"
+        title="image-20221203055026862" /></li>
+</ul>
+</li>
+<li>通过new创建时，每次都会申请一个新的内存地址。
+<ul>
+<li><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055357029.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055357029.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055357029.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055357029.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203055357029.png"
+        title="image-20221203055357029" /></li>
+</ul>
+</li>
+<li><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060002103.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060002103.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060002103.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060002103.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060002103.png"
+        title="image-20221203060002103" /><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060240084.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060240084.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060240084.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060240084.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060240084.png"
+        title="image-20221203060240084" /></li>
+<li><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060432937.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060432937.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060432937.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060432937.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221203060432937.png"
+        title="image-20221203060432937" /></li>
+</ul>
+<h4 id="123-stringbuilder">1.2.3 StringBuilder</h4>
+<ul>
+<li>可变的字符串类，可以将其看作为一个容器。</li>
+<li>作用：提高字符串的操作效率。</li>
+</ul>
+<h2 id="2-java-se-进阶">2 Java SE 进阶</h2>
+<h3 id="21-面向对象进阶">2.1 面向对象进阶</h3>
+<h4 id="211-git">2.1.1 GIT</h4>
+<ul>
+<li>Git的基本工作流程<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204021701207.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204021701207.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204021701207.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204021701207.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204021701207.png"
+        title="image-20221204021701207" /></li>
+<li>Git常用命令
+<ul>
+<li>status：查看git状态。</li>
+<li>add：添加，将文件添加到暂存区。</li>
+<li>commit：提交，将暂存区文件提交到历史仓库。</li>
+<li>log：查看日志。</li>
+</ul>
+</li>
+<li>Git版本管理
+<ul>
+<li>reflog：查看所有分支的所有操作记录。</li>
+<li><strong>切换版本</strong>：reset &ndash;hard 版本索引值。</li>
+</ul>
+</li>
+<li>分支工作流程
+<ul>
+<li>Head指向当前使用的分支。</li>
+<li>创建-切换-合并-删除</li>
+<li>创建指令：branch 分支名</li>
+<li>切换指令：checkout 分支名</li>
+<li>查看分支：branch</li>
+<li>合并分支：merge 分支名</li>
+<li>删除分支：branch -d 分支名</li>
+</ul>
+</li>
+<li>远程仓库工作流程<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204035555809.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204035555809.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204035555809.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204035555809.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221204035555809.png"
+        title="image-20221204035555809" /></li>
+</ul>
+<h4 id="212-分类和static">2.1.2 分类和static</h4>
+<ul>
+<li>分类思想（学生类举例）：
+<ul>
+<li>Student类：标准学生类</li>
+<li>Dao类：Data Access Object 访问存储数据的数组或集合</li>
+<li>Service类：进行业务逻辑的处理（判断id是否存在)</li>
+<li>Controller类：和用户打交道（接收需求，采集信息，打印数据）</li>
+</ul>
+</li>
+<li>分包思想（不同功能的类文件，放在不同的包下）:
+<ul>
+<li>本质是<strong>文件夹</strong></li>
+<li>命名规则：字母都是小写的</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>​	System.exit(0); 退出当前运行的JVM虚拟机</p>
+<p>​	退出指定的循环位置： name ：while</p>
+<p>​		break name;</p>
+</blockquote>
+<ul>
+<li>static关键字特点
+<ul>
+<li>被static修饰的成员会被该类的<strong>所有对象</strong>共享</li>
+<li>被static修饰的成员会<strong>随着类的加载而加载，优先于对象存在</strong></li>
+<li>非静态需要创建对象之后，才能进行使用</li>
+<li>多了一种调用方式，可以通过**类名.**进行调用</li>
+</ul>
+</li>
+<li>static关键字内存图解<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221205030415924.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221205030415924.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221205030415924.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221205030415924.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221205030415924.png"
+        title="image-20221205030415924" /></li>
+<li>静态方法中，只能访问静态成员（成员变量和方法）</li>
+<li>非静态方法中，都可以使用</li>
+<li>静态方法中，没有this关键字</li>
+</ul>
+<h4 id="213-继承">2.1.3 继承</h4>
+<ul>
+<li>继承的好处
+<ul>
+<li>调高代码的<strong>复用性</strong></li>
+<li>提高代码的<strong>维护性</strong></li>
+<li>类与类之间产生关系，提升了多态</li>
+</ul>
+</li>
+<li>继承的坏处
+<ul>
+<li>降低代码的灵活性</li>
+<li>增强了代码的耦合性</li>
+</ul>
+</li>
+<li>this关键字和super关键字
+<ul>
+<li>就近原则： 子类-&gt;成员-&gt;父类</li>
+</ul>
+</li>
+<li>方法重写
+<ul>
+<li>子类和父类出现一模一样的方法生成</li>
+<li>子类需要父类功能，又有自己特有的内容：通过super先调用</li>
+<li>父类中私有的方法不能被重写</li>
+<li>静态方法必须静态重写，非静态也相同
+<ul>
+<li>静态方法不能被重写，其本质是父类的静态方法被覆盖掉</li>
+</ul>
+</li>
+<li>重写时，子类权限必须大于等于父类</li>
+</ul>
+</li>
+<li>权限修饰符<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221209143217074.png"
+        data-srcset="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221209143217074.png, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221209143217074.png 1.5x, https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221209143217074.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/wzzzzx/pictures/master/image-20221209143217074.png"
+        title="image-20221209143217074" /></li>
+<li>每一个构造方法中，都默认存在了一个super()空参构造方法</li>
+<li>抽象类的特点：
+<ul>
+<li>不能创建对象</li>
+<li>抽象类中有构造方法</li>
+<li>子类必须重写所有抽象方法</li>
+<li>子类可以将自己也变成一个抽象类</li>
+<li>抽象类中可以没有抽象方法，但有抽象方法的类肯定是抽象类</li>
+</ul>
+</li>
+<li>模板设计模式
+<ul>
+<li>把抽象类整体看作一个模板，让继承类去重写抽象方法实现需求</li>
+</ul>
+</li>
+<li>final关键字
+<ul>
+<li>被其修饰的方法不能被重写了</li>
+<li>被其修饰的类不能再被继承了</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>​	常量的命名规范：</p>
+<p>​		1.一个单词所有字母大写</p>
+<p>​		2.多个单词所有字母大写，中间用_隔开</p>
+</blockquote>
+<ul>
+<li>代码块
+<ul>
+<li>java中{ }的代码称为代码块</li>
+<li>静态代码块
+<ul>
+<li>类中方法外</li>
+<li>static关键字修饰，随着类的加载而加载，并且<strong>只执行一次</strong></li>
+<li>在类加载时做一些初始化操作</li>
+</ul>
+</li>
+<li>局部代码块
+<ul>
+<li>方法当中定义</li>
+<li>限定变量的生命周期，及早释放，提高内存的利用率</li>
+</ul>
+</li>
+<li>构造代码块
+<ul>
+<li>类中方法外定义</li>
+<li>构造方法执行时执行，且在构造方法前执行</li>
+<li>将重复的构造方法中的内容添加到构造代码块中</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="214-接口">2.1.4 接口</h4>
+<ul>
+<li>一个类中，所有的方法，都是抽象方法，可以将其定义为<strong>接口</strong></li>
+<li>接口是一种引用数据类型</li>
+<li>接口存在的两个重要意义：
+<ul>
+<li><strong>规则</strong>的定义</li>
+<li>程序的<strong>拓展性</strong></li>
+</ul>
+</li>
+<li>定义interface 实现implement</li>
+<li>接口和类之间的关系可以单实现也可以多实现</li>
+<li>接口中的成员变量只能是<strong>常量</strong>，其默认被<strong>static,final,public</strong>关键字修饰</li>
+<li>接口中<strong>无构造方法</strong></li>
+<li>接口中的成员方法默认有public,abstract修饰</li>
+<li>JDK8
+<ul>
+<li>可以写非抽象方法，用default关键字</li>
+<li>可以写static静态方法</li>
+</ul>
+</li>
+<li>JDK9中允许方法使用private修饰</li>
+<li>直接父类和接口出现相同的方法，优先使用父类的方法</li>
+</ul>
+<h4 id="215-多态与内部类">2.1.5 多态与内部类</h4>
+<ul>
+<li>同一个对象，在不同时刻表现的不同形态</li>
+<li>前提条件
+<ol>
+<li>继承/实现关系</li>
+<li>方法重写</li>
+<li>父类引用指向子类对象</li>
+</ol>
+</li>
+<li>多态的特点
+<ul>
+<li>成员变量：编译看左边（父类），运行看左边（父类）</li>
+<li>成员方法：编译看左边（父类），运行看右边（子类）</li>
+</ul>
+</li>
+<li>好处：提高了代码的扩展性
+<ul>
+<li>使用父类作为参数，可以接收任意的子类对象</li>
+</ul>
+</li>
+<li>弊端：不能调用子类特有的方法</li>
+<li>多态中的转型：
+<ul>
+<li>向上转型：父类引用指向子类对象</li>
+<li>向下转型：子类引用指向父类对象</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>​	避免强转出现的问题:</p>
+<p>​		变量 instanceof 类型</p>
+<p>​		是的话返回true，否则返回flase</p>
+</blockquote>
+<ul>
+<li>内部类：A类的内部中定义一个B类，B类就被称为内部类。
+<ul>
+<li>创建格式：外部类.内部类 对象名 = new 外部类().new 内部类();</li>
+</ul>
+</li>
+<li>成员内部类
+<ul>
+<li>私有成员内部类(private)</li>
+<li>静态成员内部类(static):外部类.内部类 对象名 = new 外部类.内部类();</li>
+</ul>
+</li>
+<li>局部内部类
+<ul>
+<li>方法中的类</li>
+<li>只能在方法中，创建对象并访问</li>
+</ul>
+</li>
+<li>匿名内部类
+<ul>
+<li>特殊的局部内部类(定义在方法内部)(要求掌握)</li>
+<li>需要存在一个接口或类</li>
+<li><strong>将继承\实现，方法重写，创建对象，放在了一步进行</strong></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">new</span> <span class="n">类名或接口名</span><span class="o">{</span>
+    <span class="n">重写方法</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div><ul>
+<li>当方法的参数是接口或抽象类时，可以将匿名内部类作为实际参数进行传递</li>
+<li>匿名内部类在开发中的使用：</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">goSwimming</span><span class="o">(</span><span class="k">new</span> <span class="n">Swimming</span><span class="o">(){</span>
+   <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">swim</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;测试&#34;</span><span class="o">)</span><span class="err">；</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">goSwimming</span><span class="o">(</span><span class="n">Swimming</span> <span class="n">swimming</span><span class="o">){</span>
+    <span class="n">swimming</span><span class="o">.</span><span class="na">swim</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nf">Swimming</span><span class="o">(){</span>
+    <span class="kt">void</span> <span class="nf">swim</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div><h4 id="216-lambda">2.1.6 Lambda</h4>
+<ul>
+<li>
+<p>方便理解：Lambda表达式，对匿名内部类进行类优化</p>
+</li>
+<li>
+<p>函数式编程思想：更多关注<strong>做什么</strong></p>
+<ul>
+<li>尽量忽略面向对象的复杂语法</li>
+</ul>
+</li>
+<li>
+<p>Lambda表达式的三要素：<strong>形式参数，箭头，代码块</strong></p>
+</li>
+<li>
+<p>Lambda表达式的格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="o">(</span><span class="n">形式参数</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">(</span><span class="n">代码块</span><span class="o">)</span>
+</code></pre></div></li>
+<li>
+<p>Lambda表达式前提：</p>
+<ol>
+<li>有一个接口</li>
+<li>接口中有且仅有一个抽象方法</li>
+</ol>
+</li>
+<li>
+<p>匿名内部类和Lambda的区别</p>
+<ul>
+<li>类型不同
+<ul>
+<li>匿名内部类：可以接口，抽象类，或具体类</li>
+<li>Lambda：只能接口</li>
+</ul>
+</li>
+<li>限制不同
+<ul>
+<li>接口中仅有一个抽象方法：Lambda或匿名内部类</li>
+<li>接口中有多个抽象方法：只能用匿名内部类</li>
+</ul>
+</li>
+<li>实现原理不同
+<ul>
+<li>匿名内部类：编译后，产生一个单独.class文件</li>
+<li>Lambda:编译后，不会生成.class文件。其在运行过程中动态生成，不会保存在电脑中。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="22-常用api异常">2.2 常用API&amp;异常</h3>
+<h4 id="221-math类">2.2.1 Math类</h4>
+<ul>
+<li>所有成员都是静态的，直接用Math.方法名使用</li>
+</ul>
+<h4 id="222-system类">2.2.2 System类</h4>
+<ul>
+<li>exit(int status); 终止当前JVM虚拟机。非零代表异常终止。</li>
+<li>currentTimeMillis(); 返回当前时间(以毫秒为单位)</li>
+<li>arraycopy(数据源数组，起始索引，目的地数组，起始索引，拷贝个数); 数组copy</li>
+</ul>
+<h4 id="223-object类">2.2.3 Object类</h4>
+<ul>
+<li>所有类的父类</li>
+<li>toString方法
+<ul>
+<li>toString方法输出对象的地址值</li>
+<li>toString可以自动重写 自动生成</li>
+</ul>
+</li>
+<li>equals方法
+<ul>
+<li>默认比较地址值</li>
+<li>可以重写equals方法 自动生成</li>
+</ul>
+</li>
+</ul>
+<h4 id="224-bigdecimal类">2.2.4 BigDecimal类</h4>
+<ul>
+<li>用来进行<strong>精确计算</strong></li>
+<li>想要进行精确运算，要使用<strong>字符串</strong>的构造</li>
+</ul>
+<h4 id="225-基本数据包装类integer">2.2.5 基本数据包装类(Integer)</h4>
+<ul>
+<li>int范围(-2'31 ~ 2'31-1)</li>
+<li>将基本数据类型封装为对象，可以在对象中定义很多方法操作该数据</li>
+<li>自动装箱：Java底层会自动帮我调用valueof方法，讲基本数据类型自动转换成引用数据类型</li>
+<li>自动拆箱：把一个包装类变成基本数据类型</li>
+</ul>
+<h4 id="226-star数组的高级操作">2.2.6 :star:数组的高级操作</h4>
+<ul>
+<li>二分查找
+<ul>
+<li>前提：数据按大小顺序排列</li>
+</ul>
+</li>
+<li>冒泡排序
+<ul>
+<li>相邻的元素比大小，再交换</li>
+</ul>
+</li>
+<li>递归
+<ul>
+<li>核心：
+<ol>
+<li>一定要有出口</li>
+<li>明确递归的规则</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>快排
+<ol>
+<li>从右开始找比基准数小的</li>
+<li>从左开始找比基准数大的</li>
+<li>交换两个值的位置</li>
+<li>重复执行1，2直到两个箭头指向同一个索引为止</li>
+<li>基准数归位(:dragon_face:归位）</li>
+<li>左递归(0到left-1)</li>
+<li>右递归(left+1到right0)</li>
+</ol>
+</li>
+</ul>
+<h4 id="227-arrays">2.2.7 Arrays</h4>
+<ul>
+<li>包含操作数组的各种方法</li>
+<li>sort（快排）</li>
+<li>binarySearch（二分查找）
+<ul>
+<li>如果查看的元素不存在，返回 (-插入点-1)</li>
+<li>插入点：如果这个元素在数组中，他应该在哪个索引上</li>
+</ul>
+</li>
+</ul>
+<h4 id="228-时间日期类timer_clock">2.2.8 时间日期类:timer_clock:</h4>
+<ul>
+<li>
+<p>世界标准时间：格林尼治时间GMT</p>
+</li>
+<li>
+<p>计算机起始时间：1970年1月1日</p>
+</li>
+<li>
+<p>Data类</p>
+<ul>
+<li>空参构造表示电脑当前时间</li>
+<li>有参构造表示起始时间开始过了多少毫秒</li>
+</ul>
+</li>
+<li>
+<p>SimpleDateFormat类</p>
+<ul>
+<li>格式化和解析Date类</li>
+<li>yyyy年MM月dd日 HH:mm:ss</li>
+<li>parse(String a)转换成Date对象</li>
+</ul>
+</li>
+<li>
+<p>JDK8新增日期类</p>
+<ul>
+<li>
+<p>DateTimeFormatter</p>
+<ul>
+<li>DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&ldquo;yyyy年 &hellip;..&quot;)</li>
+</ul>
+</li>
+<li>
+<p>Date类被拆解为三个类</p>
+<ol>
+<li>LocalDate：日期  年月日</li>
+<li>LocalTime：时间  时分秒</li>
+<li>LocalDateTime：时间+日期  年月日时分秒
+<ol>
+<li>LocalDateTime now = LocalDateTime.now();
+LocalDateTime ldt = LocalDateTime.of(2021, 10, 1);</li>
+<li>可以转换为LocalDate和LocalTime对象</li>
+<li>format(DateTimeFormatter dtf):把LocalDateTime转换为String</li>
+<li>parse():把日期字符串解析为LocalDateTime(<strong>静态方法</strong>)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>计算时间间隔的类</p>
+<ul>
+<li>Period
+<ul>
+<li>between(LocalDate a, LocalDate b);获取时间间隔</li>
+</ul>
+</li>
+<li>Duration
+<ul>
+<li>between(LocaDateTime a, LocalDateTime b);获取时间间隔</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="229-异常">2.2.9 异常</h4>
+<ul>
+<li>
+<p>用来描述代码中出现的问题，导致JVM非正常停止。</p>
+</li>
+<li>
+<p>Throwable</p>
+<ul>
+<li>Error:严重问题，无法通过代码处理。比如：内存溢出</li>
+<li>Exception:异常类，<strong>程序本身可以处理</strong>的问题
+<ol>
+<li>RuntimeException及其子类:运行时异常（空指针，数组索引越界）</li>
+<li>除RuntimeException之外的所有异常:编译时异常，程序不能通过编译。(日期格式化异常)</li>
+</ol>
+</li>
+<li>成员方法
+<ol>
+<li>getMessage:返回详细消息</li>
+<li>toString:返回可抛出的简短描述</li>
+<li>printStackTrace:把异常信息输出到控制台**(程序还会继续执行下去)**</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>JVM虚拟机处理异常</p>
+<ol>
+<li>将异常信息以红色字体输出在控制台</li>
+<li>在出现异常出停止程序运行</li>
+</ol>
+</li>
+<li>
+<p>throws 异常类名;</p>
+<ul>
+<li>写在方法定义出，声明一个异常。</li>
+<li>如果声明的异常是一个运行时的异常，那么可以省略不写</li>
+<li>如果声明的异常是一个编译时的异常，必须在方法后声明</li>
+</ul>
+</li>
+<li>
+<p>throw</p>
+<ul>
+<li>创建异常的对象</li>
+<li>throw new 异常; 创建后下面的代码不在执行</li>
+</ul>
+</li>
+<li>
+<p>throws和throw的区别</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/Havadking/pictures/master/image-20221216184951896.png"
+        data-srcset="https://raw.githubusercontent.com/Havadking/pictures/master/image-20221216184951896.png, https://raw.githubusercontent.com/Havadking/pictures/master/image-20221216184951896.png 1.5x, https://raw.githubusercontent.com/Havadking/pictures/master/image-20221216184951896.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/Havadking/pictures/master/image-20221216184951896.png"
+        title="image-20221216184951896" /></p>
+</li>
+<li>
+<p>异常的处理方法 try&hellip;catch&hellip;</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">try</span><span class="o">{</span>
+    <span class="c1">//可能异常的代码
+</span><span class="c1"></span><span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">异常类</span><span class="o">){</span>
+    <span class="n">出现异常进行的操作</span>
+<span class="o">}</span>
+</code></pre></div><ul>
+<li>好处：可以让程序继续执行下去</li>
+<li>多个异常可以用多个catch来实现</li>
+</ul>
+</li>
+<li>
+<p>自定义异常</p>
+<ul>
+<li>目的：让异常的信息更加的清晰可读
+<ol>
+<li>定义异常类(类名见名知意)</li>
+<li>写继承关系</li>
+<li>写空参构造</li>
+<li>写带参构造</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="23-集合">2.3 集合</h3>
+<h4 id="231-collection">2.3.1 Collection</h4>
+<ul>
+<li>集合只能存引用数据类型，不能存储基本数据类型</li>
+<li>集合要存基本数据类型，要存储它们的包装类</li>
+<li>集合：
+<ol>
+<li>单列Collection
+<ol>
+<li>List可重复（接口）
+<ol>
+<li>ArrayList</li>
+<li>LinkedList</li>
+</ol>
+</li>
+<li>Set不可重复（接口）
+<ol>
+<li>HashSet</li>
+<li>TreeSet</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>双列Map（接口）
+<ol>
+<li>HashMap</li>
+<li>TreeMap</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Collection集合的遍历
+<ul>
+<li>
+<p>Iterator:迭代器，集合的专用遍历方式（默认指向当前的0索引）</p>
+<ul>
+<li>hasNext：判断是否有元素可以取出</li>
+<li>next：获取当前位置的元素，迭代器向后移动一个位置</li>
+</ul>
+</li>
+<li>
+<p>可以使用增强for格式</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="232-list集合">2.3.2 List集合</h4>
+<ul>
+<li>
+<p>有序集合，有序指的是<strong>存取顺序</strong></p>
+</li>
+<li>
+<p>特点：</p>
+<ol>
+<li>有序：存储和取出顺序相同</li>
+<li>有索引</li>
+<li>可重复</li>
+</ol>
+</li>
+<li>
+<p>ArrayList</p>
+<ul>
+<li>
+<p>底层数据结构为数组，查询快，增删慢</p>
+</li>
+<li>
+<p>空参构造时在底层创建了一个长度为0的数组</p>
+</li>
+<li>
+<p>默认长度为10，默认名字elementDate，默认变量size</p>
+</li>
+</ul>
+</li>
+<li>
+<p>LinkedList</p>
+<ul>
+<li>底层数据结构为链表，查询慢，增删快</li>
+<li>双向链</li>
+</ul>
+</li>
+</ul>
+<h4 id="233-泛型">2.3.3 泛型</h4>
+<ul>
+<li>
+<p>好处：</p>
+<ul>
+<li>把运行时期的问题提前到了编译期间</li>
+<li>避免了强制类型转换</li>
+</ul>
+</li>
+<li>
+<p>使用的地方</p>
+<ul>
+<li>类后面</li>
+<li>方法声明上</li>
+<li>接口后面</li>
+</ul>
+</li>
+<li>
+<p>定义格式</p>
+<ul>
+<li>&lt;类型&gt;：制定一种类型的格式</li>
+<li>&lt;类型1,类型2&gt;:两种格式</li>
+</ul>
+</li>
+<li>
+<p>泛型方法</p>
+<ul>
+<li>public static <!-- raw HTML omitted --> void add(T t1, T t2);</li>
+</ul>
+</li>
+<li>
+<p>泛型接口</p>
+<ul>
+<li>实现类也不给泛型</li>
+<li>实现类给出具体的数据类型</li>
+</ul>
+</li>
+<li>
+<p>通配符</p>
+<ul>
+<li>类型通配符：&lt;?&gt;</li>
+<li>类型通配符上限：&lt;?extends类型&gt;：表示类型及其子类</li>
+<li>类型通配符下限：&lt;?super类型&gt;:表示类型及其父类</li>
+</ul>
+</li>
+</ul>
+<h4 id="234-set集合">2.3.4 Set集合</h4>
+<ul>
+<li>可以去重复</li>
+<li>存取顺序不一致</li>
+<li>没有带索引的方法，不能使用普通for遍历</li>
+<li>TreeSet
+<ul>
+<li>可以对内部的元素<strong>按照规则进行排序</strong></li>
+<li>要使用TreeSet必须指定<strong>排序规则</strong></li>
+<li>排序规则：
+<ol>
+<li>自然排序
+<ol>
+<li>使用<strong>空参构造</strong>TreeSet集合</li>
+<li>自定义类中实现<strong>Comperable</strong>接口</li>
+<li>重写<strong>compareTo</strong>方法
+<ol>
+<li>comperTo返回值为负数，表示较小值，放在左边</li>
+<li>0，重复了，不存</li>
+<li>正数，较大值，放在右边</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>比较器排序
+<ol>
+<li>使用带参构造方法</li>
+<li>让集合构造方法接收Comparator的实现类对象，重写compare(T o1, T o2)方法</li>
+<li>必须按照主要条件和次要条件来写</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>数据结构-树
+<ul>
+<li>二叉查找树
+<ol>
+<li>每一个节点只有两个字节点</li>
+<li>左子节点小于自己</li>
+<li>右子节点大于自己</li>
+</ol>
+</li>
+<li>平衡二叉树
+<ul>
+<li>是一个二叉查找树</li>
+<li>特点
+<ol>
+<li>左右两子树的高度差不超过1</li>
+<li>任意节点的左右两个子树都是平衡二叉树</li>
+</ol>
+</li>
+<li>左旋</li>
+<li>右旋</li>
+</ul>
+</li>
+<li>红黑树
+<ul>
+<li>平衡二叉B树</li>
+<li>每个节点都可以是红或者黑</li>
+<li>是一个二叉查找树，但不是高度平衡的，通过自己的红黑规则来实现平衡</li>
+<li>红黑规则：
+<ol>
+<li>每一个节点必须是红色或黑色</li>
+<li>根节点是黑色的</li>
+<li>如果一个节点没有字节点或父节点，则该节点相应的指针属性值为Nil，这些Nil视为叶节点，且都是黑色的</li>
+<li>如果一个节点是红色的，他的字节点必须是黑色的</li>
+<li>对每一个节点，该节点到其所有后代叶节点的简单路径上，均包含相同数目的黑色节点</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="附录idea常用快捷键happy">附录：IDEA常用快捷键:happy:</h2>
+<ul>
+<li>:star:Ctrl+Alt+T 快速环绕</li>
+<li>:star:Ctrl+Alt+M 快速封装方法</li>
+<li>:star:Ctrl+Alt+V 快速的接收方法的返回值</li>
+<li>Ctrl+N 搜索类</li>
+<li>Ctrl+B 跟进到方法的实现</li>
+<li>Alt+7 显示类的结构大纲</li>
+<li>Ctrl+F12 显示该类所有的结构</li>
+<li>:star:Ctrl+D 向下复制一行</li>
+<li>:star:Ctrl+P 查看方法的参数类型</li>
+<li>:star:Shift+Enter 向下插入一行</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/posts/java/" data-title=""><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/posts/java/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/posts/java/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/posts/java/" data-title=""><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/posts/java/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/java%E7%BC%96%E7%A0%81%E5%91%BD%E5%90%8D%E4%B9%8B%E9%81%93/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/Havadking" target="_blank">Havad</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
