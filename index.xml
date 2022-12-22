@@ -1,26 +1,26 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>我的全新 Hugo 网站</title>
+        <title>Havad&#39;s Web Home</title>
         <link>http://example.org/</link>
-        <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bobojiner@proton.me (Havad)</managingEditor>
-            <webMaster>bobojiner@proton.me (Havad)</webMaster>
+        <description>Havad&#39;s Web Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bobojienr@proton.me (Havad)</managingEditor>
+            <webMaster>bobojienr@proton.me (Havad)</webMaster><lastBuildDate>Fri, 23 Dec 2022 01:02:24 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title></title>
+    <title>Java编码命名之道</title>
+    <link>http://example.org/posts/java%E5%91%BD%E5%90%8D%E4%B9%8B%E9%81%93/</link>
+    <pubDate>Fri, 23 Dec 2022 01:02:24 &#43;0800</pubDate>
+    <author>Havad</author>
+    <guid>http://example.org/posts/java%E5%91%BD%E5%90%8D%E4%B9%8B%E9%81%93/</guid>
+    <description><![CDATA[Java编码命名之道 常见的命名规则 一、大驼峰命名法 类名使用 例子：ServiceDiscovery, ServiceInstance, LruCacheFactory 二、小驼峰命名法 方法名，参数名，成员变]]></description>
+</item>
+<item>
+    <title>Java学习笔记</title>
     <link>http://example.org/posts/java/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <pubDate>Fri, 23 Dec 2022 00:09:05 &#43;0800</pubDate>
     <author>Havad</author>
     <guid>http://example.org/posts/java/</guid>
     <description><![CDATA[Java学习笔记 1 Java SE 基础 1.1 面向对象基础 1.1.1 什么是类 类是对现实生活中一类具有相同属性和行为 的事物的抽象。 类的属性由成员变量体现。 类的行为由成员]]></description>
-</item>
-<item>
-    <title></title>
-    <link>http://example.org/posts/java%E7%BC%96%E7%A0%81%E5%91%BD%E5%90%8D%E4%B9%8B%E9%81%93/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>Havad</author>
-    <guid>http://example.org/posts/java%E7%BC%96%E7%A0%81%E5%91%BD%E5%90%8D%E4%B9%8B%E9%81%93/</guid>
-    <description><![CDATA[Java编码命名之道 常见的命名规则 一、大驼峰命名法 类名使用 例子：ServiceDiscovery, ServiceInstance, LruCacheFactory 二、小驼峰命名法 方法名，参数名，成员变]]></description>
 </item>
 </channel>
 </rss>
